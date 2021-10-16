@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10681cbf-72f4-47fe-a3af-f5b579e30ed7" name="Changes" comment="Add folders">
-      <change beforePath="$PROJECT_DIR$/Hello_World/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hello_World/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hello_World/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hello_World/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hello_World/.idea/project-template.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hello_World/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hello_World/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hello_World/Hello_World.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hello_World/out/production/Hello_World/edu/northeastern/yanxuan/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OperatorsAndControlFlow/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OperatorsAndControlFlow/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OperatorsAndControlFlow/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OperatorsAndControlFlow/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OperatorsAndControlFlow/.idea/project-template.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OperatorsAndControlFlow/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OperatorsAndControlFlow/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OperatorsAndControlFlow/OperatorsAndControlFlow.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OperatorsAndControlFlow/out/production/OperatorsAndControlFlow/edu/northeastern/yanxuan/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/StringAndArrays/StringAndArrays.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +32,9 @@
       <option name="presentableId" value="Default" />
       <updated>1631674752709</updated>
       <workItem from="1631674756670" duration="3000" />
-      <workItem from="1633489543234" duration="369000" />
+      <workItem from="1633489543234" duration="561000" />
+      <workItem from="1633494011659" duration="4000" />
+      <workItem from="1633494029958" duration="1000" />
     </task>
     <task id="LOCAL-00001" summary="Add folders">
       <created>1633489698894</created>
@@ -59,7 +43,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633489698896</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add folders">
+      <created>1633490010837</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1633490010838</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -75,6 +66,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add folders" />
