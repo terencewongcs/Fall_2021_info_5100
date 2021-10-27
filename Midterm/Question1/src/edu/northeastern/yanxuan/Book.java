@@ -7,7 +7,9 @@ public abstract class Book {
     String publishYear;
 
     public Book (String title, double price, String publishYear) {
-
+        this.title=title;
+        this.price=price;
+        this.publishYear=publishYear;
 
     } //Constructor
 

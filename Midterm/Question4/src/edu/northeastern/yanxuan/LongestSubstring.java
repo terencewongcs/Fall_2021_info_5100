@@ -1,24 +1,33 @@
 package edu.northeastern.yanxuan;
 
-import java.util.HashMap;
+import java.util.HashSet;
 
 public class LongestSubstring {
-    public static int LongestSubstring(String str){
-        int dis=0;
-        for(int i=0;i<str.length();i++){
-            HashMap<Character,Integer> hm=new HashMap<Character,Integer>();
-            int j=i;
-            for(;j<str.length();j++){
-                if(hm.containsKey(str.charAt(j))){
-                    dis=Math.max(dis,j-i);
-                    break;
-                }
-                else{
-                    hm.put(str.charAt(j),1);
-                }
-            }
-            dis=Math.max(dis,j-i);
+    public static String LongestSubstring(String str) {
+        int start = 0;
+        int dis = 0;
+        String ls = "";
+        HashSet<Character> hs = new HashSet<>();
+
+        if (str.length() <= 1) {
+            return str;
         }
-        return dis;
+
+        for (int i = 0; i < str.length(); i++) {
+            if (!hs.contains(str.charAt(i))) {
+                hs.add(str.charAt(i));
+                if (dis < i + 1 - start) {
+                    dis = Math.max(dis, i + 1 - start);
+                    ls = str.substring(start, i + 1);
+                }
+            } else {
+                while (hs.contains(str.charAt(i))) {
+                    hs.remove(str.charAt(start));
+                    start++;
+                }
+                hs.add(str.charAt(i));
+            }
+        }
+        return ls;
     }
 }

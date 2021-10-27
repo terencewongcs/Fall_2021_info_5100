@@ -5,8 +5,9 @@ public class Reference extends  Book implements iBorrowable {
     int returnDay = 0;
     String category;
 
-    public Reference(String title, double price, String publishYear) {
+    public Reference(String title, double price, String publishYear,String category) {
         super(title, price, publishYear);
+        this.category=category;
     }
 
     public String getCategory() {
@@ -19,7 +20,7 @@ public class Reference extends  Book implements iBorrowable {
 
     @Override
     public String description() {
-        return this.title+"all information is real.";
+        return this.title+" all information is real.";
     }
 
     @Override

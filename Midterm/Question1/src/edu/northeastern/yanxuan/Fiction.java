@@ -10,7 +10,7 @@ public class Fiction extends  Book implements iBorrowable{
 
     @Override
     public String description() {
-        return this.title+" all events are imaginary and not based on real facts";
+        return this.title+" all events are imaginary and not based on real facts.";
     }
 
     @Override
