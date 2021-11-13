@@ -16,3 +16,7 @@
 10.  [Leetcode 8 Valid Palindrome](https://github.com/terencewongcs/Leetcode-Record/blob/main/125.valid-palindrome.java)
 11.  [Leetcode 9 Reverse words in a String](https://github.com/terencewongcs/Leetcode-Record/blob/main/151.reverse-words-in-a-string.java)
 12.  [Leetcode 10 String Compression](https://github.com/terencewongcs/Leetcode-Record/blob/main/443.string-compression.java)
+
+## Homework 3
+1. [Question 1](https://github.com/terencewongcs/Fall_2021_info_5100/tree/main/Homework/Homework_3/Question_1)
+2. [Question 2](https://github.com/terencewongcs/Fall_2021_info_5100/tree/main/Homework/Homework_3/Question_2)
