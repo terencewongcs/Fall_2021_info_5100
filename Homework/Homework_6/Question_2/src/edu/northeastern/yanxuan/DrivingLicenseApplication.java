@@ -1,17 +1,15 @@
 package edu.northeastern.yanxuan;
 
-import java.time.temporal.ChronoUnit;
 import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.Scanner;
 
 public class DrivingLicenseApplication {
 
-    public static void main(String[] args) throws Exception {
-        getDateOfBirthFromUser();
+    public static void main(String[] args) {
+        drivingLicenseApplication();
     }
 
-    private static void getDateOfBirthFromUser() throws Exception {
+    private static void drivingLicenseApplication() {
 
         Scanner myObj = new Scanner(System.in);
 
@@ -27,19 +25,19 @@ public class DrivingLicenseApplication {
         String strDate = myObj.nextLine();
         int day = Integer.parseInt(strDate);
 
-        Date dateNow = new Date();
+        Date nowDate = new Date();
 
-        Date date = new GregorianCalendar(year, month -1, day).getTime();
+        Date date = new Date(year + 16 - 1900, month - 1, day);
 
-        int difference = (int) ChronoUnit.DAYS.between( date.toInstant(), dateNow.toInstant());
+        try {
+            if (date.after(nowDate)) {
+                throw new Exception("Over Age");
+            }
 
-
-        if(365* 16 > difference) {
-            throw new Exception("The age of the applicant is too early to apply for a driving license!");
+        } catch (Exception e) {
+            System.out.println("The age of the applicant is 14 which is too early to apply for a driving license");
         }
-        else {
-            System.out.println("Successful!");
-        }
+
 
     }
 }
