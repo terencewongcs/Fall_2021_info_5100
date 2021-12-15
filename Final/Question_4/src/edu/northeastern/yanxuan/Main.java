@@ -38,7 +38,7 @@ public class Main {
 
         }
     }
-        private static void(Genre adventure){
+        private static void addAdventureMovies(Genre adventure){
             GregorianCalendar date = new GregorianCalendar(1851, 2, 11);
             ArrayList<String> actors = new ArrayList<String>();
             actors.add("Tom");
