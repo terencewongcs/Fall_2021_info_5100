@@ -1,9 +1,6 @@
 package edu.northeastern.yanxuan;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 public class Main {
 
@@ -23,7 +20,8 @@ public class Main {
         students.add(student5);
 
         System.out.println("Sort by ascending order of 'name'");
-        Collections.sort(students, (a, b) -> a.getName().compareTo(b.getName()));
+        Collections.sort(students,new Student.NameComparator());
+        //Collections.sort(students, (a, b) -> a.getName().compareTo(b.getName()));
         for (Student student : students) {
             System.out.println(student.toString());
         }
