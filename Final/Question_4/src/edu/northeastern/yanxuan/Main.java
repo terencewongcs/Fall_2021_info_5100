@@ -40,9 +40,9 @@ public class Main {
         //Create a predicate for release date before 2000 and a predicate for release date before 1990
         //and then Chain the predicates for finding movies between 1990 and 2000.
         List<Movie> listOfAllMovie = netflix.genreList.stream().flatMap(genre -> genre.movieList.stream()).collect(Collectors.toList());
-        Predicate<Movie> dateBefore2000 = movie -> movie.releaseDate.before(new GregorianCalendar(2000, Calendar.JANUARY, 1).getTime());
-        Predicate<Movie> dateAfter1990 = movie -> movie.releaseDate.after(new GregorianCalendar(1990, Calendar.JANUARY, 1).getTime());
-        printMovieInRange((ArrayList<Movie>) listOfAllMovie, dateBefore2000, dateAfter1990);
+        Predicate<Movie> before2000 = movie -> movie.releaseDate.before(new GregorianCalendar(2000, Calendar.JANUARY, 1).getTime());
+        Predicate<Movie> after1990 = movie -> movie.releaseDate.after(new GregorianCalendar(1990, Calendar.JANUARY, 1).getTime());
+        printMovieInRange((ArrayList<Movie>) listOfAllMovie, before2000, after1990);
 
         }
     private static void printMovieInRange(ArrayList<Movie> res, Predicate<Movie> condition1, Predicate<Movie> condition2){
