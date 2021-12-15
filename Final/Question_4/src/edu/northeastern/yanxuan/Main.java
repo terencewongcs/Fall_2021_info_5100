@@ -8,7 +8,7 @@ public class Main {
 
         Netflix netflix = new Netflix();
         Genre adventure = netflix.getGenre("Adventure");
-         addAdventureMovies(adventure);
+        addAdventureMovies(adventure);
         Genre science = netflix.getGenre("Science");
         addScienceMovies(science);
 
@@ -37,7 +37,7 @@ public class Main {
 
 
         }
-
+    }
         private static void(Genre adventure){
             GregorianCalendar date = new GregorianCalendar(1851, 2, 11);
             ArrayList<String> actors = new ArrayList<String>();

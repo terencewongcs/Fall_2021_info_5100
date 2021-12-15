@@ -1,5 +1,6 @@
 package edu.northeastern.yanxuan;
 
+import java.util.Comparator;
 import java.util.Date;
 
 public class Student {
@@ -29,6 +30,13 @@ public class Student {
 
     public Date getDateOfBirth() {
         return dateOfBirth;
+    }
+
+
+    static class NameComparator implements Comparator<Student>{
+        public int compare(Student a,Student b){
+            return a.getName().compareTo(b.getName());
+        }
     }
 
     @Override
