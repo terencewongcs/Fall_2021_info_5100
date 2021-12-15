@@ -1,6 +1,8 @@
 package edu.northeastern.yanxuan;
 
 import java.util.*;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -11,7 +13,8 @@ public class Main {
         addAdventureMovies(adventure);
         Genre science = netflix.getGenre("Science");
         addScienceMovies(science);
-
+        netflix.addGenre(adventure);
+        netflix.addGenre(science);
 
         //For all movies released before 2000, add the string "(Classic)" to the title of the movie using
         //flatMap.
@@ -27,15 +30,26 @@ public class Main {
                 .forEach(movie -> movie.addYeartoTitle());
 
         // Get the latest 3 movies released using .limit() method of stream.
-        netflix.genreList.stream().flatMap(genre -> {
-            Collections.sort(genre.getMovieList(), new Genre.DateComparator());
+        List<Movie> ans = netflix.genreList.stream().flatMap(genre -> genre.movieList.stream()).sorted(new Comparator<Movie>() {
+            @Override
+            public int compare(Movie o1, Movie o2) {
+                return o2.releaseDate.compareTo(o1.releaseDate);
+            }
+        }).limit(3).collect(Collectors.toList());
 
-            netflix.genreList.stream().flatMap(genre -> {
-                Collections.sort(genre.getMovieList(), new Genre.DateComparator());
-                genre.getMovieList().stream();
-            }).limit(3).forEach(movie -> System.out.println(movie.toString()));
+        //Create a predicate for release date before 2000 and a predicate for release date before 1990
+        //and then Chain the predicates for finding movies between 1990 and 2000.
+        List<Movie> listOfAllMovie = netflix.genreList.stream().flatMap(genre -> genre.movieList.stream()).collect(Collectors.toList());
+        Predicate<Movie> dateBefore2000 = movie -> movie.releaseDate.before(new GregorianCalendar(2000, Calendar.JANUARY, 1).getTime());
+        Predicate<Movie> dateAfter1990 = movie -> movie.releaseDate.after(new GregorianCalendar(1990, Calendar.JANUARY, 1).getTime());
+        printMovieInRange((ArrayList<Movie>) listOfAllMovie, dateBefore2000, dateAfter1990);
 
-
+        }
+    private static void printMovieInRange(ArrayList<Movie> res, Predicate<Movie> condition1, Predicate<Movie> condition2){
+        for (Movie movie: res) {
+            if(condition1.test(movie) && condition2.test(movie)){
+                System.out.println(movie.title);
+            }
         }
     }
         private static void addAdventureMovies(Genre adventure){

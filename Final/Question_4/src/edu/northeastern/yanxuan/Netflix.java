@@ -17,4 +17,7 @@ public class Netflix {
         }
         return filter.get(0);
     }
+    public void addGenre(Genre genre){
+        genreList.add(genre);
+    }
 }
